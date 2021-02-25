@@ -9,6 +9,9 @@ URL for the EXTERNAL_URL is your hostname
 
 curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
 
-sudo yum install gitlab-ce-13.8.3-ce.0.el7.x86_64
+GITURL=$(hostname)
 
-for more information : https://packages.gitlab.com/gitlab/gitlab-ce
+sudo EXTERNAL_URL="https://$GITURL" yum install -y gitlab-ce-13.8.3-ce.0.el7.x86_64
+
+
+For more information : https://packages.gitlab.com/gitlab/gitlab-ce
