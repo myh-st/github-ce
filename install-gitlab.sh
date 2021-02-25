@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 GITURL=$(hostname)
 sudo yum install -y curl policycoreutils-python openssh-server perl
 sudo systemctl enable sshd
